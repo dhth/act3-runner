@@ -36,6 +36,7 @@ jobs:
           act3 \
             -g \
             -c ./act3-main.yml \
+            --html-title "@dhth's workflows" \
             -f html > dist/index.html
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
