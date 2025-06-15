@@ -35,21 +35,21 @@ jobs:
         run: |
           act3 \
             -g \
-            -c ./act3-main.yml \
+            -c ./main.yml \
             --html-title "main" \
             --html-template-path templates/results.html \
             -f html > dist/main.html
 
           act3 \
             -g \
-            -c ./act3-pr.yml \
+            -c ./pr.yml \
             --html-title "pull requests" \
             --html-template-path templates/results.html \
             -f html > dist/pr.html
 
           act3 \
             -g \
-            -c ./act3-vuln.yml \
+            -c ./vuln.yml \
             --html-title "vulnerability checks" \
             --html-template-path templates/results.html \
             -f html > dist/vuln.html
