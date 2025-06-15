@@ -56,7 +56,7 @@ jobs:
             --html-template-path templates/report.html \
             -f html > dist/reports/vuln.html
 
-          cp templates/index.html dist/index.html
+          cp -r assets/* dist
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Setup Pages
