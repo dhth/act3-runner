@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install mrj
+      - name: Install act3
         uses: jaxxstorm/action-install-gh-release@6096f2a2bbfee498ced520b6922ac2c06e990ed2 # v2.1.0
         with:
           repo: dhth/act3
@@ -30,35 +30,31 @@ jobs:
         with:
           app-id: ${{ secrets.GH_TOKEN_APP_ID }}
           private-key: ${{ secrets.GH_TOKEN_APP_PRIVATE_KEY }}
-      - name: Create directories
+      - name: Create dist directories
         run: |
-          mkdir -p \
-            dist \
-            dist/main \
-            dist/pr \
-            dist/vuln
-      - name: Generate results
+          mkdir -r dist dist/reports
+      - name: Generate reports
         run: |
           act3 \
             -g \
             -c ./main.yml \
             --html-title "main" \
-            --html-template-path templates/results.html \
-            -f html > dist/main/index.html
+            --html-template-path templates/report.html \
+            -f html > dist/reports/main.html
 
           act3 \
             -g \
             -c ./pr.yml \
             --html-title "pull requests" \
-            --html-template-path templates/results.html \
-            -f html > dist/pr/index.html
+            --html-template-path templates/report.html \
+            -f html > dist/reports/pr.html
 
           act3 \
             -g \
             -c ./vuln.yml \
             --html-title "vulnerability checks" \
-            --html-template-path templates/results.html \
-            -f html > dist/vuln/index.html
+            --html-template-path templates/report.html \
+            -f html > dist/reports/vuln.html
 
           cp templates/index.html dist/index.html
         env:
