@@ -30,7 +30,13 @@ jobs:
         with:
           app-id: ${{ secrets.GH_TOKEN_APP_ID }}
           private-key: ${{ secrets.GH_TOKEN_APP_PRIVATE_KEY }}
-      - run: mkdir dist
+      - name: Create directories
+        run: |
+          mkdir -p \
+            dist \
+            dist/main \
+            dist/pr \
+            dist/vuln
       - name: Generate results
         run: |
           act3 \
@@ -38,21 +44,21 @@ jobs:
             -c ./main.yml \
             --html-title "main" \
             --html-template-path templates/results.html \
-            -f html > dist/main.html
+            -f html > dist/main/index.html
 
           act3 \
             -g \
             -c ./pr.yml \
             --html-title "pull requests" \
             --html-template-path templates/results.html \
-            -f html > dist/pr.html
+            -f html > dist/pr/index.html
 
           act3 \
             -g \
             -c ./vuln.yml \
             --html-title "vulnerability checks" \
             --html-template-path templates/results.html \
-            -f html > dist/vuln.html
+            -f html > dist/vuln/index.html
 
           cp templates/index.html dist/index.html
         env:
