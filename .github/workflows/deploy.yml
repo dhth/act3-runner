@@ -31,13 +31,30 @@ jobs:
           app-id: ${{ secrets.GH_TOKEN_APP_ID }}
           private-key: ${{ secrets.GH_TOKEN_APP_PRIVATE_KEY }}
       - run: mkdir dist
-      - name: Generate doc
+      - name: Generate results
         run: |
           act3 \
             -g \
             -c ./act3-main.yml \
-            --html-title "@dhth's workflows" \
-            -f html > dist/index.html
+            --html-title "main" \
+            --html-template-path templates/results.html \
+            -f html > dist/main.html
+
+          act3 \
+            -g \
+            -c ./act3-pr.yml \
+            --html-title "pull requests" \
+            --html-template-path templates/results.html \
+            -f html > dist/pr.html
+
+          act3 \
+            -g \
+            -c ./act3-vuln.yml \
+            --html-title "vulnerability checks" \
+            --html-template-path templates/results.html \
+            -f html > dist/vuln.html
+
+          cp templates/index.html dist/index.html
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Setup Pages
