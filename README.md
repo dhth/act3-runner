@@ -2,6 +2,6 @@
   <h1 align="center">act3-runner</h1>
 </p>
 
-A runner for [act3][1] for my my repos.
+A runner for [act3][1] for my repos.
 
 [1]: https://github.com/dhth/act3
