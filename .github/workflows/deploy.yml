@@ -11,7 +11,7 @@ permissions:
   id-token: write
 
 env:
-  ACT3_VERSION: v2.0.0-rc.1
+  ACT3_VERSION: v2.0.0
 
 jobs:
   deploy:
