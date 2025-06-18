@@ -2,6 +2,9 @@ workflows:
   - id: W_kwDOLkC0eM4KBwzG
     repo: dhth/act3
     name: main
+  - id: W_kwDOO8FIts4KDc3J
+    repo: dhth/act3-runner
+    name: deploy
   - id: W_kwDON4qJ1M4KCoE2
     repo: dhth/bmm
     name: main
@@ -35,6 +38,9 @@ workflows:
   - id: W_kwDOOu3ogM4KBjiY
     repo: dhth/mrj
     name: main
+  - id: W_kwDOOu43Es4JwjM-
+    repo: dhth/mrj-runner
+    name: mrj
   - id: W_kwDOL0-ubM4KDU99
     repo: dhth/mult
     name: main
