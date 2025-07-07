@@ -2,17 +2,29 @@ workflows:
   - id: W_kwDOLkC0eM4GMc6G
     repo: dhth/act3
     name: vulncheck
+  - id: W_kwDON4qJ1M4KNa8e
+    repo: dhth/bmm
+    name: audit
   - id: W_kwDOLvB80c4GMptD
     repo: dhth/commits
     name: vulncheck
   - id: W_kwDOLb3Pms4GUgB-
     repo: dhth/cueitup
     name: vulncheck
+  - id: W_kwDOPHe0JM4KTBPL
+    repo: dhth/dfft
+    name: audit
   - id: W_kwDOLqVZts4GMpYb
     repo: dhth/dstll
     name: vulncheck
+  - id: W_kwDOOChY484KK165
+    repo: dhth/ecscope
+    name: audit
   - id: W_kwDOLghtl84GMbuw
     repo: dhth/ecsv
+    name: vulncheck
+  - id: W_kwDOMG_5As4GMdyl
+    repo: dhth/hours
     name: vulncheck
   - id: W_kwDOLa0twM4GVeea
     repo: dhth/kplay
@@ -49,6 +61,9 @@ workflows:
     name: audit
   - id: W_kwDON18Fhs4Igiaf
     repo: dhth/tash
+    name: audit
+  - id: W_kwDOMnT5Os4KMJFq
+    repo: dhth/tbll
     name: audit
   - id: W_kwDOMgkK1c4KDbTU
     repo: dhth/tomo

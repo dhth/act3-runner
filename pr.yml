@@ -14,6 +14,9 @@ workflows:
   - id: W_kwDOLb3Pms4KCl61
     repo: dhth/cueitup
     name: pr
+  - id: W_kwDOPHe0JM4KTBPN
+    repo: dhth/dfft
+    name: pr
   - id: W_kwDOLqVZts4KDUsO
     repo: dhth/dstll
     name: pr

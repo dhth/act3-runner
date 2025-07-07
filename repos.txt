@@ -3,6 +3,7 @@ dhth/bmm
 dhth/chronotes
 dhth/commits
 dhth/cueitup
+dhth/dfft
 dhth/dstll
 dhth/ecscope
 dhth/ecsv
@@ -10,6 +11,7 @@ dhth/ghx
 dhth/hours
 dhth/kplay
 dhth/mrj
+dhth/mrj-runner
 dhth/mult
 dhth/omm
 dhth/outtasync
