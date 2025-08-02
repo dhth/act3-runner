@@ -65,6 +65,9 @@ workflows:
   - id: W_kwDOMnT5Os4KMJFq
     repo: dhth/tbll
     name: audit
+  - id: W_kwDOPRl83s4KhoQh
+    repo: dhth/ting
+    name: audit
   - id: W_kwDOMgkK1c4KDbTU
     repo: dhth/tomo
     name: audit

@@ -29,6 +29,9 @@ workflows:
   - id: W_kwDOOh1Jh84KDb-d
     repo: dhth/ghx
     name: pr
+  - id: W_kwDOPUUnP84KldLf
+    repo: dhth/graphc
+    name: pr
   - id: W_kwDOMG_5As4KC5cV
     repo: dhth/hours
     name: pr
@@ -73,6 +76,9 @@ workflows:
     name: pr
   - id: W_kwDOMnT5Os4KCzHJ
     repo: dhth/tbll
+    name: pr
+  - id: W_kwDOPRl83s4KhoQj
+    repo: dhth/ting
     name: pr
   - id: W_kwDOMgkK1c4KDbLw
     repo: dhth/tomo
