@@ -51,6 +51,13 @@ jobs:
 
           act3 \
             -g \
+            -c ./release.yml \
+            --html-title "releases" \
+            --html-template-path templates/report.html \
+            -f html > dist/reports/release.html
+
+          act3 \
+            -g \
             -c ./vuln.yml \
             --html-title "vulnerability checks" \
             --html-template-path templates/report.html \

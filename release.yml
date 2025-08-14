@@ -1,0 +1,46 @@
+workflows:
+  - id: W_kwDOLkC0eM4FaKWA
+    repo: dhth/act3
+    name: release
+  - id: W_kwDOLvB80c4Fmr3Z
+    repo: dhth/commits
+    name: release
+  - id: W_kwDOLb3Pms4FRxjY
+    repo: dhth/cueitup
+    name: release
+  - id: W_kwDOLqVZts4GMpYa
+    repo: dhth/dstll
+    name: release
+  - id: W_kwDOLghtl84FWTla
+    repo: dhth/ecsv
+    name: release
+  - id: W_kwDOOh1Jh84Jtd1n
+    repo: dhth/ghx
+    name: release
+  - id: W_kwDOPUUnP84Kp02B
+    repo: dhth/graphc
+    name: release
+  - id: W_kwDOMG_5As4GEdgp
+    repo: dhth/hours
+    name: release
+  - id: W_kwDOLa0twM4FRynn
+    repo: dhth/kplay
+    name: release
+  - id: W_kwDOL0-ubM4FuRN4
+    repo: dhth/mult
+    name: release
+  - id: W_kwDOMTtucc4GVkAh
+    repo: dhth/omm
+    name: release
+  - id: W_kwDOLnOhHM4FdsSK
+    repo: dhth/prs
+    name: release
+  - id: W_kwDOLe-lJM4FVCrl
+    repo: dhth/punchout
+    name: release
+  - id: W_kwDOLjRZQ84FZMD3
+    repo: dhth/schemas
+    name: release
+  - id: W_kwDONfFcSM4IA6ot
+    repo: dhth/shfl
+    name: release
