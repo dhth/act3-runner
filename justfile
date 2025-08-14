@@ -15,7 +15,7 @@ pr:
 release:
     act3 config gen \
         -r "$(cat repos.txt | xargs | tr ' ' ',')" \
-        -n '^release$' \
+        -n '^(release|Release)$' \
         >release.yml
 
 vuln:

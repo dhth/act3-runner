@@ -2,15 +2,24 @@ workflows:
   - id: W_kwDOLkC0eM4FaKWA
     repo: dhth/act3
     name: release
+  - id: W_kwDON4qJ1M4IqXzc
+    repo: dhth/bmm
+    name: Release
   - id: W_kwDOLvB80c4Fmr3Z
     repo: dhth/commits
     name: release
   - id: W_kwDOLb3Pms4FRxjY
     repo: dhth/cueitup
     name: release
+  - id: W_kwDOPHe0JM4KaFpN
+    repo: dhth/dfft
+    name: Release
   - id: W_kwDOLqVZts4GMpYa
     repo: dhth/dstll
     name: release
+  - id: W_kwDOOChY484IylHL
+    repo: dhth/ecscope
+    name: Release
   - id: W_kwDOLghtl84FWTla
     repo: dhth/ecsv
     name: release
@@ -26,12 +35,18 @@ workflows:
   - id: W_kwDOLa0twM4FRynn
     repo: dhth/kplay
     name: release
+  - id: W_kwDOOu3ogM4JwheX
+    repo: dhth/mrj
+    name: Release
   - id: W_kwDOL0-ubM4FuRN4
     repo: dhth/mult
     name: release
   - id: W_kwDOMTtucc4GVkAh
     repo: dhth/omm
     name: release
+  - id: W_kwDOLafHJ84FQglU
+    repo: dhth/outtasync
+    name: Release
   - id: W_kwDOLnOhHM4FdsSK
     repo: dhth/prs
     name: release
@@ -44,3 +59,15 @@ workflows:
   - id: W_kwDONfFcSM4IA6ot
     repo: dhth/shfl
     name: release
+  - id: W_kwDOM1h8ms4HFUUv
+    repo: dhth/squidge
+    name: Release
+  - id: W_kwDOMnT5Os4GybjU
+    repo: dhth/tbll
+    name: Release
+  - id: W_kwDOPRl83s4KitvO
+    repo: dhth/ting
+    name: Release
+  - id: W_kwDOMgkK1c4Gyuy4
+    repo: dhth/tomo
+    name: Release
