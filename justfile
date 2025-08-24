@@ -18,10 +18,16 @@ release:
         -n '^(release|Release)$' \
         >release.yml
 
+scan:
+    act3 config gen \
+        -r "$(cat repos.txt | xargs | tr ' ' ',')" \
+        -n '^(scan)$' \
+        >scan.yml
+
 vuln:
     act3 config gen \
         -r "$(cat repos.txt | xargs | tr ' ' ',')" \
         -n '^(vulncheck|audit)$' \
         >vuln.yml
 
-all: main pr release vuln
+all: main pr release scan vuln

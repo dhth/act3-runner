@@ -1,0 +1,31 @@
+workflows:
+  - id: W_kwDOLb3Pms4K8jxO
+    repo: dhth/cueitup
+    name: scan
+  - id: W_kwDOPHe0JM4K8lGn
+    repo: dhth/dfft
+    name: scan
+  - id: W_kwDOLqVZts4K8n9-
+    repo: dhth/dstll
+    name: scan
+  - id: W_kwDOOChY484K8mJy
+    repo: dhth/ecscope
+    name: scan
+  - id: W_kwDOMG_5As4K74uD
+    repo: dhth/hours
+    name: scan
+  - id: W_kwDOLa0twM4K8j9h
+    repo: dhth/kplay
+    name: scan
+  - id: W_kwDOMTtucc4K8jt-
+    repo: dhth/omm
+    name: scan
+  - id: W_kwDOLafHJ84K8oUQ
+    repo: dhth/outtasync
+    name: scan
+  - id: W_kwDOLnOhHM4K8jwl
+    repo: dhth/prs
+    name: scan
+  - id: W_kwDOLe-lJM4K8ogh
+    repo: dhth/punchout
+    name: scan
