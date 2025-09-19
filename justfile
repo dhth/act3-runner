@@ -30,4 +30,36 @@ vuln:
         -n '^(vulncheck|audit)$' \
         >vuln.yml
 
+run-main:
+    act3 \
+      -g \
+      -c ./main.yml
+
+run-pr:
+    act3 \
+      -g \
+      -c ./pr.yml
+
+run-release:
+    act3 \
+      -g \
+      -c ./release.yml
+
+run-scan:
+    act3 \
+      -g \
+      -c ./scan.yml
+
+run-vuln:
+    act3 \
+      -g \
+      -c ./vuln.yml
+
+run-all:
+    just run-main
+    just run-pr
+    just run-release
+    just run-scan
+    just run-vuln
+
 all: main pr release scan vuln
