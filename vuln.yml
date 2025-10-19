@@ -65,6 +65,9 @@ workflows:
   - id: W_kwDOMnT5Os4KMJFq
     repo: dhth/tbll
     name: audit
+  - id: W_kwDOQEAiH84L1nGl
+    repo: dhth/tflens
+    name: vulncheck
   - id: W_kwDOPRl83s4KhoQh
     repo: dhth/ting
     name: audit

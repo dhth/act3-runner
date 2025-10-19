@@ -77,6 +77,9 @@ workflows:
   - id: W_kwDOMnT5Os4KCzHJ
     repo: dhth/tbll
     name: pr
+  - id: W_kwDOQEAiH84L1nGk
+    repo: dhth/tflens
+    name: pr
   - id: W_kwDOPRl83s4KhoQj
     repo: dhth/ting
     name: pr

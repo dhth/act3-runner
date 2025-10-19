@@ -62,9 +62,15 @@ workflows:
   - id: W_kwDOM1h8ms4HFUUv
     repo: dhth/squidge
     name: Release
+  - id: W_kwDON18Fhs4LC6Fk
+    repo: dhth/tash
+    name: Release
   - id: W_kwDOMnT5Os4GybjU
     repo: dhth/tbll
     name: Release
+  - id: W_kwDOQEAiH84L2C2u
+    repo: dhth/tflens
+    name: release
   - id: W_kwDOPRl83s4KitvO
     repo: dhth/ting
     name: Release
