@@ -2,6 +2,9 @@ workflows:
   - id: W_kwDOLkC0eM4GMc6G
     repo: dhth/act3
     name: vulncheck
+  - id: W_kwDOPQZdFc4Kftuc
+    repo: dhth/agent1
+    name: audit
   - id: W_kwDON4qJ1M4KNa8e
     repo: dhth/bmm
     name: audit

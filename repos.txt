@@ -1,4 +1,6 @@
 dhth/act3
+dhth/agent1
+dhth/atls
 dhth/bmm
 dhth/chronotes
 dhth/commits
@@ -7,6 +9,7 @@ dhth/dfft
 dhth/dstll
 dhth/ecscope
 dhth/ecsv
+dhth/envee
 dhth/ghx
 dhth/graphc
 dhth/hours
@@ -28,4 +31,6 @@ dhth/tbll
 dhth/tflens
 dhth/ting
 dhth/tomo
+dhth/unreleased
+dhth/unreleased-report
 dhth/urll

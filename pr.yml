@@ -2,6 +2,12 @@ workflows:
   - id: W_kwDOLkC0eM4KBwxb
     repo: dhth/act3
     name: pr
+  - id: W_kwDOPQZdFc4Kftue
+    repo: dhth/agent1
+    name: pr
+  - id: W_kwDOPjjrIc4K82bC
+    repo: dhth/atls
+    name: pr
   - id: W_kwDON4qJ1M4KCn9-
     repo: dhth/bmm
     name: pr
@@ -25,6 +31,9 @@ workflows:
     name: pr
   - id: W_kwDOLghtl84KCzxg
     repo: dhth/ecsv
+    name: pr
+  - id: W_kwDOQR05cM4MOnoz
+    repo: dhth/envee
     name: pr
   - id: W_kwDOOh1Jh84KDb-d
     repo: dhth/ghx
@@ -85,6 +94,12 @@ workflows:
     name: pr
   - id: W_kwDOMgkK1c4KDbLw
     repo: dhth/tomo
+    name: pr
+  - id: W_kwDOQZ6S7M4MdIMm
+    repo: dhth/unreleased
+    name: pr
+  - id: W_kwDOQaP6Sc4Mfg2n
+    repo: dhth/unreleased-report
     name: pr
   - id: W_kwDOODKhOM4KDbSb
     repo: dhth/urll
