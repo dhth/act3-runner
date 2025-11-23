@@ -50,9 +50,9 @@ workflows:
   - id: W_kwDOOu3ogM4KBjiY
     repo: dhth/mrj
     name: main
-  - id: W_kwDOOu43Es4JwjM-
+  - id: W_kwDOOu43Es4MfrUe
     repo: dhth/mrj-runner
-    name: mrj
+    name: main
   - id: W_kwDOL0-ubM4KDU99
     repo: dhth/mult
     name: main
