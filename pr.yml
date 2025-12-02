@@ -35,6 +35,9 @@ workflows:
   - id: W_kwDOQR05cM4MOnoz
     repo: dhth/envee
     name: pr
+  - id: W_kwDOQeq3pc4Mlbv_
+    repo: dhth/gcue
+    name: pr
   - id: W_kwDOOh1Jh84KDb-d
     repo: dhth/ghx
     name: pr

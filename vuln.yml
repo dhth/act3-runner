@@ -26,6 +26,9 @@ workflows:
   - id: W_kwDOLghtl84GMbuw
     repo: dhth/ecsv
     name: vulncheck
+  - id: W_kwDOQeq3pc4Mlbv9
+    repo: dhth/gcue
+    name: audit
   - id: W_kwDOMG_5As4GMdyl
     repo: dhth/hours
     name: vulncheck
@@ -76,6 +79,9 @@ workflows:
     name: audit
   - id: W_kwDOMgkK1c4KDbTU
     repo: dhth/tomo
+    name: audit
+  - id: W_kwDOQZ6S7M4MgjD_
+    repo: dhth/unreleased
     name: audit
   - id: W_kwDOODKhOM4KDbW3
     repo: dhth/urll
