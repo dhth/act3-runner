@@ -29,6 +29,9 @@ workflows:
   - id: W_kwDOOh1Jh84Jtd1n
     repo: dhth/ghx
     name: release
+  - id: W_kwDOQeq3pc4M1qxl
+    repo: dhth/grafq
+    name: Release
   - id: W_kwDOPUUnP84Kp02B
     repo: dhth/graphc
     name: release

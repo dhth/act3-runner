@@ -35,11 +35,11 @@ workflows:
   - id: W_kwDOQR05cM4MOnoy
     repo: dhth/envee
     name: main
-  - id: W_kwDOQeq3pc4Mlbv-
-    repo: dhth/gcue
-    name: main
   - id: W_kwDOOh1Jh84JuDWJ
     repo: dhth/ghx
+    name: main
+  - id: W_kwDOQeq3pc4Mlbv-
+    repo: dhth/grafq
     name: main
   - id: W_kwDOPUUnP84KldLe
     repo: dhth/graphc

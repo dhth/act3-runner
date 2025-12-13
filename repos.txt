@@ -10,8 +10,8 @@ dhth/dstll
 dhth/ecscope
 dhth/ecsv
 dhth/envee
-dhth/gcue
 dhth/ghx
+dhth/grafq
 dhth/graphc
 dhth/hours
 dhth/kplay

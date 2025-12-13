@@ -27,7 +27,7 @@ workflows:
     repo: dhth/ecsv
     name: vulncheck
   - id: W_kwDOQeq3pc4Mlbv9
-    repo: dhth/gcue
+    repo: dhth/grafq
     name: audit
   - id: W_kwDOMG_5As4GMdyl
     repo: dhth/hours
