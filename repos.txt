@@ -1,9 +1,11 @@
 dhth/act3
 dhth/agent1
+dhth/agx
 dhth/atls
 dhth/bmm
 dhth/chronotes
 dhth/commits
+dhth/crumbs
 dhth/cueitup
 dhth/dfft
 dhth/dstll
@@ -22,6 +24,7 @@ dhth/omm
 dhth/outtasync
 dhth/prs
 dhth/punchout
+dhth/refit
 dhth/schemas
 dhth/shfl
 dhth/squidge

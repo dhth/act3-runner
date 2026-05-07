@@ -5,6 +5,9 @@ workflows:
   - id: W_kwDOPQZdFc4Kftue
     repo: dhth/agent1
     name: pr
+  - id: W_kwDOQp-Q8s4M5vbx
+    repo: dhth/agx
+    name: pr
   - id: W_kwDOPjjrIc4K82bC
     repo: dhth/atls
     name: pr
@@ -16,6 +19,9 @@ workflows:
     name: pr
   - id: W_kwDOLvB80c4KDT3C
     repo: dhth/commits
+    name: pr
+  - id: W_kwDORiSw-c4OhMh3
+    repo: dhth/crumbs
     name: pr
   - id: W_kwDOLb3Pms4KCl61
     repo: dhth/cueitup
@@ -70,6 +76,9 @@ workflows:
     name: pr
   - id: W_kwDOLe-lJM4KDYj6
     repo: dhth/punchout
+    name: pr
+  - id: W_kwDOR-VuQ84PajEB
+    repo: dhth/refit
     name: pr
   - id: W_kwDOLjRZQ84KDYrc
     repo: dhth/schemas

@@ -1,4 +1,5 @@
-default: all
+default:
+    just --choose
 
 main:
     act3 config gen \

@@ -5,6 +5,9 @@ workflows:
   - id: W_kwDOPQZdFc4Kftuc
     repo: dhth/agent1
     name: audit
+  - id: W_kwDOQp-Q8s4M5vbu
+    repo: dhth/agx
+    name: audit
   - id: W_kwDON4qJ1M4KNa8e
     repo: dhth/bmm
     name: audit
