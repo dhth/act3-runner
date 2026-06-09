@@ -18,7 +18,7 @@ dhth/graphc
 dhth/hours
 dhth/kplay
 dhth/mrj
-dhth/mrj-runner
+dhth/deps
 dhth/mult
 dhth/omm
 dhth/outtasync
