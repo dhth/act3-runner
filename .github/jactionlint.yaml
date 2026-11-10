@@ -1,0 +1,6 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/jdx/jactionlint/main/schema/jactionlint-config.json
+profile: default
+rules:
+  # lint.yml only runs short lint jobs, so cancelling superseded runs saves
+  # little; deploy.yml sets its own concurrency for Pages deploys.
+  concurrency-limits: off

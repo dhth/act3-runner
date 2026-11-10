@@ -10,21 +10,13 @@ A runner for [act3][1] for my repos.
 Config files are generated using `act3` itself:
 
 ```bash
-act3 config gen \
-	-r "$(cat repos.txt | xargs | tr ' ' ',')" \
-	-n '^main$' \
-	>main.yml
+mise run gen
 ```
 
 HTML reports are generated as follows:
 
 ```bash
-act3 \
-	-g \
-	-c ./main.yml \
-	--html-title "main" \
-	--html-template-path templates/report.html \
-	-f html >dist/reports/main.html
+mise run report
 ```
 
 [1]: https://github.com/dhth/act3
