@@ -1,0 +1,130 @@
+[tool_alias]
+act3 = "github:dhth/act3"
+
+[tools]
+act3 = "2.0.0"
+jactionlint = "latest"
+yamlfmt = "latest"
+
+[tasks."gen:main"]
+description = "Generate the act3 config for main workflows"
+run = '''
+act3 config gen \
+	-r "$(xargs <repos.txt | tr ' ' ',')" \
+	-n '^main$' \
+	>main.yml
+'''
+
+[tasks."gen:pr"]
+description = "Generate the act3 config for pr workflows"
+run = '''
+act3 config gen \
+	-r "$(xargs <repos.txt | tr ' ' ',')" \
+	-n '^pr$' \
+	>pr.yml
+'''
+
+[tasks."gen:release"]
+description = "Generate the act3 config for release workflows"
+run = '''
+act3 config gen \
+	-r "$(xargs <repos.txt | tr ' ' ',')" \
+	-n '^(release|Release)$' \
+	>release.yml
+'''
+
+[tasks."gen:scan"]
+description = "Generate the act3 config for scan workflows"
+run = '''
+act3 config gen \
+	-r "$(xargs <repos.txt | tr ' ' ',')" \
+	-n '^(scan)$' \
+	>scan.yml
+'''
+
+[tasks."gen:vuln"]
+description = "Generate the act3 config for vulnerability check workflows"
+run = '''
+act3 config gen \
+	-r "$(xargs <repos.txt | tr ' ' ',')" \
+	-n '^(vulncheck|audit)$' \
+	>vuln.yml
+'''
+
+[tasks.gen]
+description = "Generate all act3 configs, one after another"
+run = [
+	{ task = "gen:main" },
+	{ task = "gen:pr" },
+	{ task = "gen:release" },
+	{ task = "gen:scan" },
+	{ task = "gen:vuln" },
+]
+
+[tasks."run:main"]
+description = "Show results for main workflows"
+run = "act3 -g -c ./main.yml"
+
+[tasks."run:pr"]
+description = "Show results for pr workflows"
+run = "act3 -g -c ./pr.yml"
+
+[tasks."run:release"]
+description = "Show results for release workflows"
+run = "act3 -g -c ./release.yml"
+
+[tasks."run:scan"]
+description = "Show results for scan workflows"
+run = "act3 -g -c ./scan.yml"
+
+[tasks."run:vuln"]
+description = "Show results for vulnerability check workflows"
+run = "act3 -g -c ./vuln.yml"
+
+[tasks.run]
+description = "Show results for all workflows, one after another"
+run = [
+	{ task = "run:main" },
+	{ task = "run:pr" },
+	{ task = "run:release" },
+	{ task = "run:scan" },
+	{ task = "run:vuln" },
+]
+
+[tasks.report]
+description = "Generate the HTML reports in dist/"
+run = '''
+mkdir -p dist/reports
+
+for report in \
+	"main:main" \
+	"pr:pull requests" \
+	"release:releases" \
+	"scan:scans" \
+	"vuln:vulnerability checks"; do
+	name="${report%%:*}"
+	title="${report#*:}"
+	act3 \
+		-g \
+		-c "./$name.yml" \
+		--html-title "$title" \
+		--html-template-path templates/report.html \
+		-f html >"dist/reports/$name.html"
+done
+
+cp -r assets/* dist
+'''
+
+[tasks."lint:actions"]
+description = "Lint GitHub Actions workflows"
+run = "jactionlint"
+
+[tasks."lint:yaml"]
+description = "Lint YAML files"
+run = '''
+yamlfmt \
+	-lint \
+	-quiet \
+	-formatter 'retain_line_breaks_single=true' \
+	$(git ls-files '*.yml' '*.yaml')
+'''

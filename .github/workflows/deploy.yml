@@ -5,80 +5,45 @@ on:
     - cron: "0 4,16 * * *"
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+permissions: {}
 
-env:
-  ACT3_VERSION: v2.0.0
+concurrency:
+  group: pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v7
-      - name: Install act3
-        uses: jaxxstorm/action-install-gh-release@25e24d2d23ae098373794ef1d6faecb48ee52da8 # v3.0.0
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Set up mise
+        uses: jdx/mise-action@b44d12e7d0d8ee7461bb893e1b1993500433185b # v5.2.7
         with:
-          repo: dhth/act3
-          tag: ${{ env.ACT3_VERSION }}
+          install_args: act3
+          cache: false
       - name: Generate GH token
         id: generate-token
-        uses: actions/create-github-app-token@v3
+        uses: actions/create-github-app-token@64ab729a6294000f5aa4a4bc0b73d1f32bc45510 # v3.3.0
         with:
-          app-id: ${{ secrets.GH_TOKEN_APP_ID }}
+          client-id: ${{ secrets.GH_TOKEN_APP_ID }}
+          permission-actions: read
           private-key: ${{ secrets.GH_TOKEN_APP_PRIVATE_KEY }}
-      - name: Create dist directories
-        run: |
-          mkdir -p dist dist/reports
       - name: Generate reports
-        run: |
-          act3 \
-            -g \
-            -c ./main.yml \
-            --html-title "main" \
-            --html-template-path templates/report.html \
-            -f html > dist/reports/main.html
-
-          act3 \
-            -g \
-            -c ./pr.yml \
-            --html-title "pull requests" \
-            --html-template-path templates/report.html \
-            -f html > dist/reports/pr.html
-
-          act3 \
-            -g \
-            -c ./release.yml \
-            --html-title "releases" \
-            --html-template-path templates/report.html \
-            -f html > dist/reports/release.html
-
-          act3 \
-            -g \
-            -c ./scan.yml \
-            --html-title "scans" \
-            --html-template-path templates/report.html \
-            -f html > dist/reports/scan.html
-
-          act3 \
-            -g \
-            -c ./vuln.yml \
-            --html-title "vulnerability checks" \
-            --html-template-path templates/report.html \
-            -f html > dist/reports/vuln.html
-
-          cp -r assets/* dist
+        run: mise run report
         env:
           GH_TOKEN: ${{ steps.generate-token.outputs.token }}
       - name: Setup Pages
-        uses: actions/configure-pages@v6
+        uses: actions/configure-pages@45bfe0192ca1faeb007ade9deae92b16b8254a0d # v6.0.0
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v5
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
         with:
           path: dist
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v5
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
