@@ -1,3 +1,6 @@
+[settings]
+task.run_auto_install = false
+
 [tool_alias]
 act3 = "github:dhth/act3"
 
